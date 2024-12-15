@@ -1,0 +1,29 @@
+.Logo {
+    display: flex;
+    gap: 2px;
+
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--link);
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Logo .LogoNo {
+    color: var(--link);
+}
+
+.Logo .LogoDash {
+    color: white;
+}
+
+.Logo .LogoClip {
+    color: var(--link);
+}
+
+.Vali img {
+    width: 75px;
+    height: 75px;
+}

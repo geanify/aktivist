@@ -1,0 +1,688 @@
+
+
+:root {
+    --link: #CFF4D2;
+    --highlight: #1d241a;
+    --grey: #89f0c3;
+    --black: #399C41;
+    --blackest: #007E2D;
+    --image-overlay: #007E2D69;
+    --highlight-menu: #1d241ac5;
+}
+
+
+html { scroll-behavior: smooth; }
+
+.fragment, .desktop-only, .mobile-only {
+    display: contents;
+}
+@media only screen and (max-width: 1000px) {
+    .desktop-only {
+      display: none;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .mobile-only {
+      display: none;
+    }
+}
+
+@-webkit-keyframes GreenfulBackgroundAnimation {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-moz-keyframes GreenfulBackgroundAnimation {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@-o-keyframes GreenfulBackgroundAnimation {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+@keyframes GreenfulBackgroundAnimation {
+    0%{background-position:0% 49%}
+    50%{background-position:100% 52%}
+    100%{background-position:0% 49%}
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-display: swap;
+}
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(182deg, #7bd856, #399c41);
+    background-size: 400% 400%;
+
+    -webkit-animation: GreenfulBackgroundAnimation 27s ease infinite;
+    -moz-animation: GreenfulBackgroundAnimation 27s ease infinite;
+    -o-animation: GreenfulBackgroundAnimation 27s ease infinite;
+    animation: GreenfulBackgroundAnimation 27s ease infinite;
+    
+
+    min-height: 100vh;
+}
+
+.Homepage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Homepage .GameList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap-reverse;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    flex-basis: max-content;
+    margin-top: 2em;
+}
+
+.Homepage .GameList .GameTile {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-style: dashed;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-color: var(--grey);
+
+    /* background: var(--black); */
+}
+
+
+.Homepage .GameList .FeaturedGameTile {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    gap: 20px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    border-color: var(--blackest);
+    color: var(--blackest);
+
+    width: 100%;
+/* 
+    border-left: 0;
+    border-right: 0; */
+
+    padding: 50px;
+
+    background: var(--link);
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Homepage .GameList .FeaturedGameTile a{
+    color: var(--blackest);
+    text-decoration: none;
+
+    font-size: 4em;
+}
+
+
+.Homepage .GameList .GameTile a{
+    color: var(--blackest);
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    flex-shrink: 1;
+}
+
+.Homepage .GameList .FeaturedGameTile img{
+    max-width: 80vw;
+    max-height: 50vh;
+    object-fit: cover;
+    image-rendering: pixelated;
+    width: 640px;
+    height: 360px;
+}
+
+.Homepage .GameList .FeaturedGameTile .FeaturedGameTileRightContainer {
+    display: flex;
+
+    color: var(--highlight);
+    width: 40%;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.Homepage .GameList .FeaturedGameTile .PlayButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 0.75em;
+
+    border: 3px dashed var(--highlight);
+
+    padding: 20px;
+
+    color: var(--highlight);
+    width: 40%;
+    flex-direction: column;
+}
+
+.Homepage .GameList .FeaturedGameTile .PlayButton:hover {
+
+    color: var(--blackest);
+
+    border: 3px dashed var(--blackest);
+
+    background-color: var(--highlight);
+}
+
+
+.Homepage .GameList .FeaturedGameTile .FeaturedGameTileRightContainer .DashedSeparator {
+    width: 100%;
+
+    max-width: 40vw;
+
+    border-bottom: 3px dashed var(--link);
+
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.Homepage .GameList .GameTile img{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.NavBarContainer {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+
+    width: 100%;
+    overflow: hidden;
+    background: var(--black);
+
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+}
+
+.Homepage .NavBar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 5vw;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.Homepage .NavBar .NavBarItem {
+    color: var(--highlight);
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.Homepage .NavBar .NavBarItem a{
+    color: var(--highlight);
+    font-weight: 700;
+    font-size: 1em;
+    text-decoration: none;
+}
+
+.Homepage .NavBar .NavBarItem a:hover{
+    color: var(--link);
+}
+
+.Homepage .NavBar .VerticalDivider {
+    border-left: 2px dashed var(--highlight);
+    height: 1.5em;
+}
+
+.SocialMedia {
+    font-size: 30px;
+    width: 100px;
+
+    flex-grow: 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding-right: 50px;
+}
+
+.SocialMedia i {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: var(--link);
+}
+
+
+.SocialMedia i:hover {
+    color: var(--highlight);
+}
+
+
+.ListaMeniuContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.ListaMeniuContainer > h1 {
+    font-size: 50px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.display-none {
+    display: none;
+    position: absolute;
+    top: -10000px;
+}
+
+.ListaMeniu {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--link);
+    padding: 50px;
+    margin-bottom: 25px;
+    gap: 5px;
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ListaMeniu:target {
+    box-shadow: -7px -7px 30px 30px var(--highlight-menu);
+}
+
+.ListaMeniu h1 {
+    color: var(--blackest);
+    padding-bottom: 5px;
+    border-style: dashed;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+.ListaMeniu .Produs {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    font-size: larger;
+}
+
+.ListaMeniu .Produs .Pret {
+    white-space: nowrap;
+}
+
+.ListaMeniu > .bg-icon {
+    color: var(--black);
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    opacity: 0.15;
+    font-size: 200px;
+    z-index: 3;
+    text-align: center;
+    top: -25px;
+}
+
+.BackToTop {
+    position: fixed;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    bottom: 30px;
+    right: 5px;
+    border-radius: 200px;
+    border-width: 50px; 
+    background-color: var(--blackest);
+    border: solid 3px var(--highlight);
+
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+
+    font-size: 30px;
+}
+
+.BackToTop a {
+    color: var(--link);
+}
+
+.BackToTop a:hover {
+    color: var(--highlight);
+}
+
+.QuickScrollProduse {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.QuickScrollProduse.right {
+    right: 0;
+}
+
+.QuickScrollProduse.right > .QuickScrollProduseLista{
+    border-radius: 40px 0px 0px 40px;
+}
+
+
+.QuickScrollProduse.left {
+    left: 0;
+}
+
+.QuickScrollProduse.left > .QuickScrollProduseLista{
+    border-radius: 0px 40px 40px 0px;
+}
+
+
+.QuickScrollProduse > .QuickScrollProduseLista {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
+    background-color: var(--link);
+    padding: 40px;
+    gap: 30px;
+
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.QuickScrollProduse .Animatie {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    z-index: 1;
+}
+
+.QuickScrollProduse .Animatie img {
+    width: auto;
+    height: 100px;
+    z-index: 1;
+}
+.QuickScrollProduse .Animatie img.wobble-hor-bottom {
+    margin-bottom: -5px;
+}
+
+.QuickScrollProduse a {
+    color: var(--blackest);
+    text-decoration: none;
+
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.QuickScrollProduse a:hover {
+    color: var(--highlight);
+}
+
+.ContactContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 30px;
+}
+.ContactContainer .Orar h1{
+    color: var(--blackest);
+}
+
+.ContactContainer iframe {
+    max-width: calc(80vw + 60px);
+    flex-grow: 2;
+    width: 600px;
+    min-height: 300px;
+    height: auto;
+}
+
+.ContactContainer .Orar {
+    max-width: 80vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--link);
+
+    padding: 30px;
+
+    color: var(--blackest);
+
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.OpenMap {
+    background-color: var(--black);
+    border-color: var(--blackest);
+    color: var(--link);
+    border-radius: 200px;
+    padding: 25px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    text-align: center;
+    font-size: 25px;
+}
+
+.OpenMap > i {
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.OpenMap a {
+    text-decoration: none;
+    color: unset;
+}
+
+
+.OpenMap:hover {
+    background-color: var(--link);
+    border-color: var(--blackest);
+    color: var(--black);
+}
+
+.Gallery {
+    position: relative;
+    overflow: scroll;
+    display: flex;
+    scroll-behavior: smooth;
+}
+
+
+.Gallery img {
+    width: 100%;
+    height: auto;
+    display: inline;
+    flex-shrink: 0;
+}
+
+.Gallery .arrow {
+    position: absolute;
+    cursor: pointer;
+    font-size: 30px;
+    color: var(--link);
+    top: calc(50% - 22px);
+
+    border-radius: 200px;
+    background-color: var(--blackest);
+    padding: 10px 15px;
+    
+}
+
+.Gallery .arrow.right {
+    right: 5px;
+}
+
+.Gallery .arrow.left {
+    left: 5px;
+}
+
+.Section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the b*/
+}
+
+.SectionText { 
+    width: 100%;
+    height: 100%;
+
+    color: var(--link);
+
+    background-color: var(--image-overlay);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.TextShadow {    
+    font-size: 50px;
+    font-weight: 900;
+
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+    1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+
+.CalendarCell {
+    border: solid 2px #000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: calc(100%/8);
+    max-width: calc(100%/8);
+    flex-shrink: 0;
+    flex-grow: 1;
+
+    background-color: var(--link);
+}
+
+.Calendar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100vw;
+}
+
+.CalendarDay {
+
+}
+
+.Calendar .CalendarCell .CalendarEvent {
+    color: var(--link);
+    font-weight: 900;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.Calendar .CalendarCell .CalendarEvent:nth-child(3n) {
+    background-color: var(--blackest);
+}
+
+.Calendar .CalendarCell .CalendarEvent:nth-child(3n + 1) {
+    background-color: var(--black);
+}
+
+.Calendar .CalendarCell .CalendarEvent:nth-child(3n + 2) {
+    background-color: var(--highlight);
+}
+
+.Calendar .CalendarCell b {
+    padding: 5px;
+}
+
+.event-preview-container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.event-preview {
+    display: flex;
+    gap: 20px;
+    padding: 25px;
+    background-color: var(--link);
+    color: var(--highlight);
+    border-radius: 20px;
+    box-shadow: 0 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+
+.event-preview img{
+    width: 20vw;
+}
+
+
+.event-preview b{
+    color: var(--highlight);
+
+}
+
+
+.event-preview .event-preview-text{
+    color: var(--highlight);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+            line-clamp: 3; 
+    -webkit-box-orient: vertical;
+}
+
+
+.event-preview a{
+    text-decoration: none;
+    color: var(--blackest);
+}
+
+.event-container .Section{
+    max-height: 60vh;
+    height: 60vh;
+}
+
+.event-container .event-text {
+    padding: 30px;
+    color: var(--link);
+    font-weight: 600;
+}
+
+.CalendarCell.disabled {
+    background-color: var(--highlight);
+}

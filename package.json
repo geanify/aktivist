@@ -1,0 +1,23 @@
+{
+  "name": "bongoz",
+  "module": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "bun run index.js",
+    "dev-start": "bun run --watch index.js"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.5.2",
+    "@elysiajs/static": "^0.5.3",
+    "@portabletext/to-html": "^2.0.13",
+    "elysia": "^0.5.25",
+    "mongoose": "^8.4.4",
+    "typed-html": "^3.0.1"
+  }
+}
